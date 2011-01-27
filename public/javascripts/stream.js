@@ -8,7 +8,7 @@ var Stream = {
     var $stream = $(".stream");
     var $publisher = $("#publisher");
 
-    $("abbr.timeago").timeago();
+    Diaspora.widgets.timeago.updateTimeAgo();
     $stream.not(".show").delegate("a.show_post_comments", "click", Stream.toggleComments);
 
     // publisher textarea reset
