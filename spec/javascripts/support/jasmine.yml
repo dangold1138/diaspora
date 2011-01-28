@@ -21,6 +21,8 @@ src_files:
   - public/javascripts/vendor/facebox.js
   - public/javascripts/diaspora.js
   - public/javascripts/widgets/alert.js
+  - public/javascripts/widgets/i18n.js
+  - public/javascripts/widgets/timeago.js
   - public/javascripts/mobile.js
   - public/javascripts/aspect-edit.js
   - public/javascripts/aspect-contacts.js
