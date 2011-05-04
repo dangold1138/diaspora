@@ -5,8 +5,8 @@
 
 (function() {
   var InfiniteScroll = function() { };
-  InfiniteScroll.prototype.options = function(){
-    return {
+  InfiniteScroll.prototype.options =
+    {
       navSelector  : "#pagination",
       nextSelector : ".paginate",
       itemSelector : ".stream_element",
@@ -21,7 +21,6 @@
       loadingText: "",
       loadingImg: '/images/ajax-loader.gif'
     };
-  };
 
   InfiniteScroll.prototype.reInitialize = function(){
     this.clear();
@@ -29,9 +28,11 @@
   };
 
   InfiniteScroll.prototype.initialize = function(){
-    $('#main_stream').infinitescroll(this.options(), function() {
-      Diaspora.widgets.publish("stream/scrolled");
-    });
+    if($('#main_stream').length !== 0){
+      $('#main_stream').infinitescroll(this.options, function() {
+        Diaspora.widgets.publish("stream/scrolled");
+      });
+    }
   };
 
   InfiniteScroll.prototype.start = function() {
