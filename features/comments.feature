@@ -75,9 +75,7 @@ Feature: commenting
     Then the first comment field should be closed
     When I focus the comment field
     Then the first comment field should be open
-<<<<<<< Updated upstream
-=======
- 
+
  Scenario: comment on a status show page
    When I sign in as "bob@bob.bob"
    And I am on "alice@alice.alice"'s page
@@ -88,6 +86,4 @@ Feature: commenting
    And I press "comment"
    And I wait for the ajax to finish
    When I am on "alice@alice.alice"'s page
-   Then I should see "I think thats a cat" 
-   
->>>>>>> Stashed changes
+   Then I should see "I think thats a cat"
